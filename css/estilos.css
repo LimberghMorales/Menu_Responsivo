@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.icono_menu{
+    display: none;
+    line-height: 70px;
+}
+.Lista_Menu input[type="checkbox"]{
+    display: none;
+}
+.header .elementos hr{
+    display: none;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 150px;
+    height: 70px;
+    line-height: 70px;
+    order: 0;
+}
+.header .Lista_Menu li{
+    display: inline-block;
+    margin: 0 20px;
+}
+.header .Lista_Menu li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(77, 64, 248);
+}
+.header .Lista_Menu li a:hover{
+    color: rgb(27, 18, 153);
+}
+.header .icon i, .cuenta i{
+    font-size: 30px;
+    color: rgb(77, 64, 248);
+}
+@media (max-width:1000px) {
+    .header{
+        margin: 0 100px;
+    }
+    .header .Lista_Menu li{
+        margin: 0 25px;
+    }
+}
+@media (max-width:900px) {
+    .header{
+        margin: 0 20px;
+    }
+    .header .Lista_Menu li{
+        margin: 0 28px;
+    }
+}
+@media (max-width:765px) {
+    .header .Lista_Menu{
+        order: 1;
+    }
+    .header .icon{
+        order: 2;
+    }
+    .header .cuenta{
+        order: 3;
+    }
+    .icono_menu{
+        display: block;
+    }
+    .icono_menu .icon_bars{
+        line-height: 70px;
+        position: absolute;
+        font-size: 20px;
+        left: 20px;
+        top: -5px;
+        font-size: 30px;
+        color: rgb(77, 64, 248);
+        cursor: pointer;
+    }
+    .header .Lista_Menu{
+        margin-top: 70px;
+    }
+    .header .Lista_Menu li{
+        display: block;
+        margin: 0px 10px;
+    }
+    .header .elementos hr{
+        display: block;
+    }
+    .header .elementos{
+        position: absolute;
+        width: 94%;
+        left: -800px;
+        transition: left .5s ease;
+    }
+    #button:checked ~ .elementos{
+        left: 20px;
+    }
+}
+.rotar{
+    transform: rotate(180deg);
+    transition: transform .5s ease-in-out;
+}
